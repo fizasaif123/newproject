@@ -10,7 +10,7 @@ function Dashboard() {
   const userId = localStorage.getItem("userId");
   const fetchJobs = async (filter) => {
     try {
-      const response = await axios.get(`http://localhost:9000/api/jobs/filter`, {
+      const response = await axios.get(`https://newproject-3-lapr.onrender.com/api/jobs/filter`, {
         params: { userId, filterType: filter },
       });
       setJobs(response.data);
@@ -22,7 +22,7 @@ function Dashboard() {
 
   const handleAcceptJob = async (jobId) => {
     try {
-      const response = await axios.post("http://localhost:9000/api/jobs/accept", { userId, jobId });
+      const response = await axios.post("https://newproject-3-lapr.onrender.com/api/jobs/accept", { userId, jobId });
       alert(response.data.message); // Notify the user
       fetchJobs(filterType); // Refresh the job list
     } catch (error) {
