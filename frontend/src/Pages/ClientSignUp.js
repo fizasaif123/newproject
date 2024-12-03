@@ -92,7 +92,7 @@ const RegisterForm = () => {
         ];
       }
 
-      const response = await axios.post("http://localhost:9000/api/auth/register", dataToSubmit);
+      const response = await axios.post("https://newproject-3-lapr.onrender.com/api/auth/register", dataToSubmit);
       alert("Registration successful: " + response.data.message);
       navigate("/signin"); // Redirect to login page
     } catch (error) {
