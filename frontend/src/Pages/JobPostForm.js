@@ -101,7 +101,7 @@ function JobPostForm() {
         description: formData.description,
       };
 
-      await axios.post("http://localhost:9000/api/jobs/post-job", dataToSubmit, {
+      await axios.post("https://newproject-3-lapr.onrender.com/api/jobs/post-job", dataToSubmit, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
